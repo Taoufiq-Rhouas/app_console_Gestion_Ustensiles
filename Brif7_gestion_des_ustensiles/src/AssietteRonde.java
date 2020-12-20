@@ -100,6 +100,7 @@ public class AssietteRonde extends Assiette{
 	}
 	
 
+	//Methode 1 for update
 	//update
 	public void update_data(int id ,double rayon ,int anne_de_fabrication) {
 		//First f = new First();

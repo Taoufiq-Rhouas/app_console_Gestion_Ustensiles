@@ -64,6 +64,7 @@ public class AssietteCarree extends Assiette {
 	}
 	
 
+	//Methode 1 for update
 	//update
 	public void update_data(int id ,double cote ,int anne_de_fabrication) {
 		//First f = new First();

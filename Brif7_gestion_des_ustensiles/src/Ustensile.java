@@ -90,7 +90,38 @@ public class Ustensile {
 	}
 	
 	
-	
-	
-
+	//Methode 2 for update
+	//update
+	public void update_global_data(int id ,double rayonORcoteORlongeur ,int anne_de_fabrication ,int choix) {
+		//First f = new First();
+		con.Connect();
+		
+		PreparedStatement ps = null;
+		try {
+			String query ="";
+			String messagesucces ="";
+			if (choix == 1) {
+				//assietteronde
+				query = "UPDATE `assietteronde` SET `rayon`=?,`anne_de_fabrication`=? WHERE `id`=?";
+				messagesucces =" \t modification assietteronde avec succes";
+			}else if (choix == 2) {
+				//assiettecarree
+				query = "UPDATE `assiettecarree` SET `cote`=?,`anne_de_fabrication`=? WHERE `id`=?";
+				messagesucces =" \t modification assiettecarree avec succes";
+			}else if (choix == 3) {
+				//cuillere
+				query = "UPDATE `cuillere` SET `longeur`=?,`anne_de_fabrication`=? WHERE `id`=?";
+				messagesucces =" \t modification cuillere avec succes";
+			}
+			//String query = "UPDATE `assietteronde` SET `rayon`=?,`anne_de_fabrication`=? WHERE `id`=?";
+			ps=con.conn.prepareStatement(query);
+			ps.setDouble(1, rayonORcoteORlongeur);
+			ps.setInt(2, anne_de_fabrication);
+			ps.setInt(3, id);
+			ps.executeUpdate();
+			System.out.println(messagesucces);
+		}catch (Exception e){
+			
+		}
+	}
 }

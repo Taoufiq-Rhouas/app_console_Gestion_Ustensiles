@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : Dim 20 déc. 2020 à 18:17
+-- Généré le : Dim 20 déc. 2020 à 21:03
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -38,7 +38,8 @@ CREATE TABLE `assiettecarree` (
 --
 
 INSERT INTO `assiettecarree` (`id`, `cote`, `anne_de_fabrication`) VALUES
-(1, 2, 200);
+(1, 20, 1920),
+(2, 20, 1940);
 
 -- --------------------------------------------------------
 
@@ -57,7 +58,8 @@ CREATE TABLE `assietteronde` (
 --
 
 INSERT INTO `assietteronde` (`id`, `rayon`, `anne_de_fabrication`) VALUES
-(1, 20, 1943);
+(1, 20, 1943),
+(2, 33, 1933);
 
 -- --------------------------------------------------------
 
@@ -78,7 +80,7 @@ CREATE TABLE `cuillere` (
 INSERT INTO `cuillere` (`id`, `longeur`, `anne_de_fabrication`) VALUES
 (1, 10, 1000),
 (2, 40, 1999),
-(3, 20, 1940),
+(3, 30, 1930),
 (4, 40, 1997);
 
 --
@@ -111,13 +113,13 @@ ALTER TABLE `cuillere`
 -- AUTO_INCREMENT pour la table `assiettecarree`
 --
 ALTER TABLE `assiettecarree`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `assietteronde`
 --
 ALTER TABLE `assietteronde`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `cuillere`

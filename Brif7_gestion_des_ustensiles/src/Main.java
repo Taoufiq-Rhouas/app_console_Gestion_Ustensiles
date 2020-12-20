@@ -125,7 +125,12 @@ public class Main {
 							longueur = scan.nextDouble();
 							System.out.println(" Anne De Fabrication pour Modifier : \n");
 							anne_de_fabrication = scan.nextInt();
-							cuillere.update_data(id, longueur, anne_de_fabrication);
+							//methode 1 for update
+							//cuillere.update_data(id, longueur, anne_de_fabrication);
+							
+							//methode 2 for update
+							cuillere.update_global_data(id, longueur, anne_de_fabrication ,3);
+							
 							
 							break;
 						case "2":
@@ -138,7 +143,11 @@ public class Main {
 							rayon = scan.nextDouble();
 							System.out.println(" Anne De Fabrication pour Modifier : \n");
 							anne_de_fabrication = scan.nextInt();
-							assietteronde.update_data(id, rayon, anne_de_fabrication);
+							//methode 1 for update
+							//assietteronde.update_data(id, rayon, anne_de_fabrication);
+							
+							//methode 2 for update
+							assietteronde.update_global_data(id, rayon, anne_de_fabrication ,1);
 							break;
 						case "3":
 							//3
@@ -147,10 +156,14 @@ public class Main {
 							System.out.println(" ID pour Modifier : \n");
 							id = scan.nextInt();
 							System.out.println(" Cote pour Modifier : \n");
-							rayon = scan.nextDouble();
+							cote = scan.nextDouble();
 							System.out.println(" Anne De Fabrication pour Modifier : \n");
 							anne_de_fabrication = scan.nextInt();
-							assiettecarree.update_data(id, cote, anne_de_fabrication);
+							//methode 1 for update
+							//assiettecarree.update_data(id, cote, anne_de_fabrication);
+							
+							//methode 2 for update
+							assiettecarree.update_global_data(id, cote, anne_de_fabrication ,2);
 							break;
 						default:
 					}

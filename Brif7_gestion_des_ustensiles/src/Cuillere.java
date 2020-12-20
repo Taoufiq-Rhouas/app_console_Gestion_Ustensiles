@@ -89,6 +89,7 @@ public class Cuillere  extends Ustensile {
 	}
 	
 
+	//Methode 1 for update
 	//update
 	public void update_data(int id ,double longeur ,int anne_de_fabrication) {
 		//First f = new First();
