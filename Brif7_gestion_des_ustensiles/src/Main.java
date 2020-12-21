@@ -23,7 +23,7 @@ public class Main {
 		while (true) {
 			System.out.println(" _________________________________\n "
 							 + "Ajouter  : -------------------> 1 \n"
-							 + " Afficher Cuilleres: ----------> 2 \n"
+							 + " Afficher : -------------------> 2 \n"
 							 + " Afficher Surface Assiettes : -> 3 \n"
 							 + " Afficher Valeur Totale : -----> 4 \n"
 							 + " Modifier Ustensile : ---------> 5");
@@ -65,7 +65,33 @@ public class Main {
 				 break;
 			 case "2":
 				 //select
-				 cuillere.afficherCuilleres();
+				 System.out.println(" Afficher AssietteRonde  : 1 \n Afficher AssietteCarree : 2 \n Afficher Cuillere       : 3");
+				 String methodafich=scan.next();
+				 switch(methodafich) {
+				 case "1":
+					 //1
+					 System.out.println("\n \t -----------------"
+					 				  + "\n \t Les AssietteRonde "
+					 				  + "\n \t ----------------- ");
+					 assietteronde.read_data();
+					 break;
+				 case "2":
+					 //2
+					 System.out.println("\n \t ------------------"
+					 				  + "\n \t Les AssietteCarree "
+					 				  + "\n \t  ------------------ ");
+					 assiettecarree.read_data();
+					 break;
+				 case "3":
+					 //3
+					 System.out.println("\n \t ------------------"
+					 				  + "\n \t Les AssietteCarree "
+					 				  + "\n \t ------------------ ");
+					 cuillere.afficherCuilleres();
+					 break;
+				 default:
+						 
+				 }
 				 //cuillere.tt();
 				 break;
 			 case "3":
@@ -81,11 +107,10 @@ public class Main {
 						 break;
 					 case "2":
 						 //2
-						 assietteronde.afficherSurfaceAssiettes(2);
+						 assiettecarree.afficherSurfaceAssiettes(2);
 						 break;
 					 default:
 				 }
-				 
 				 //cuillere.tt();
 				 break;
 			 case "4":

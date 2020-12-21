@@ -31,10 +31,6 @@ public class AssietteCarree extends Assiette {
 		this.cote = cote;
 	}
 	
-	@Override
-	public String toString() {
-		return  "\n \t ---------------- \n \t Cote    : " + this.cote ;
-	}
 	
 	//insert
 	public void create_data(double cote,int anne_de_fabrication) {
@@ -57,6 +53,12 @@ public class AssietteCarree extends Assiette {
 		//First f = new First();
 		con.Connect();
 		con.stat = con.conn.createStatement();
+		
+		con.rs = con.stat.executeQuery("SELECT COUNT(*) As total FROM assiettecarree ;");
+		while(con.rs.next()) {
+			System.out.println(" -------> total:  " + "\t" +con.rs.getInt("total") );
+		}
+		
 		con.rs = con.stat.executeQuery("SELECT * FROM `assiettecarree`");
 		while(con.rs.next()) {
 			System.out.println(" -------> ID:  " + "\t" +con.rs.getInt("id") + "\n \t Cote: " + con.rs.getDouble("cote") + " \n \t Anne De Fabrication: " + con.rs.getInt("anne_de_fabrication"));

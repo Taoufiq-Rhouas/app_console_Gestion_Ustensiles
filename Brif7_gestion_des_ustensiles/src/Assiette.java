@@ -21,14 +21,7 @@ public class Assiette extends Ustensile {
 		this.id = id;
 	}
 	
-	/*
-	@Override
-	public String toString() {
-		return  "\n \t ---------------- \n \t Anne de Fabrication    : " + this.id ;
-	}
-	*/
 	
-	//méthode afficherSurfaceAssiettes
 	
 	//méthode afficherSurfaceAssiettes
 	public void afficherSurfaceAssiettes(int choix) throws SQLException {
@@ -37,7 +30,6 @@ public class Assiette extends Ustensile {
 		if(choix == 1) {
 			//AssietteRonde
 			//AssietteRonde : 3.14 * rayon * rayon
-			//SUM(id)
 			con.Connect();
 			con.stat = con.conn.createStatement();
 			con.rs = con.stat.executeQuery("SELECT SUM(rayon) As sum_rayon FROM assietteronde ;");

@@ -39,39 +39,6 @@ public class AssietteRonde extends Assiette{
 	}
 	
 	
-	/*
-	
-	//insert
-	
-	public void create_data(String nom ,String description ,String cin) {
-		//First f = new First();
-		con.Connect();
-		PreparedStatement ps = null;
-		try {
-			if(nom.length()<11 && description.length()<31 && cin.length()<9) {
-				//System.out.println("kayen >9");
-				String query="INSERT INTO `youcode_test`(`Name`, `Description`, `CIN`) VALUES (?,?,?)";
-				ps=con.conn.prepareStatement(query);
-				ps.setString(1, nom);
-				ps.setString(2, description);
-				ps.setString(3, cin);
-				ps.executeUpdate();
-			}else{
-				if(nom.length() > 10) {
-					System.out.println("\n nom est pas valide !");
-				}else if(description.length() > 30) {
-					System.out.println("\n description est pas valide !");
-				}else if(cin.length() > 8) {
-					System.out.println("\n cin est pas valide !");
-				}
-				//System.out.println("makayen >9");
-			}
-		}catch(Exception e) {
-			System.out.print(e);
-		}
-	}
-	
-	 */
 	//insert
 	public void create_data(double rayon,int anne_de_fabrication) {
 		con.Connect();
@@ -93,6 +60,13 @@ public class AssietteRonde extends Assiette{
 		//First f = new First();
 		con.Connect();
 		con.stat = con.conn.createStatement();
+		
+		
+		con.rs = con.stat.executeQuery("SELECT COUNT(*) As total FROM assietteronde ;");
+		while(con.rs.next()) {
+			System.out.println(" -------> total:  " + "\t" +con.rs.getInt("total") );
+		}
+		
 		con.rs = con.stat.executeQuery("SELECT * FROM `assietteronde`");
 		while(con.rs.next()) {
 			System.out.println(" -------> ID:  " + "\t" +con.rs.getInt("id") + "\n \t Rayon: " + con.rs.getDouble("rayon") + " \n \t Anne De Fabrication: " + con.rs.getInt("anne_de_fabrication"));

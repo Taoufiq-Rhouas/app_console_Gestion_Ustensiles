@@ -67,15 +67,6 @@ public class Cuillere  extends Ustensile {
 		
 	}
 	
-	public void tt() throws SQLException {
-		con.Connect();
-		con.stat = con.conn.createStatement();
-		con.rs = con.stat.executeQuery("SELECT * FROM `cuillere`");
-		while(con.rs.next()) {
-			System.out.println(" -------> ID:  " + "\t" +con.rs.getInt("id") + "\n \t longeur: " + con.rs.getDouble("longeur") + " \n \t anne_de_fabrication:  " + con.rs.getInt("anne_de_fabrication"));
-		}
-	}
-	
 	
 	//select
 	public void read_data() throws SQLException {
