@@ -21,9 +21,9 @@ public class Main {
 		
 		
 		while (true) {
-			System.out.println(" _________________________________\n "
-							 + "Ajouter  : -------------------> 1 \n"
-							 + " Afficher : -------------------> 2 \n"
+			System.out.println(" _________________________________\n"
+							 + " Ajouter Ustensile : ----------> 1 \n"
+							 + " Afficher Ustensile : ---------> 2 \n"
 							 + " Afficher Surface Assiettes : -> 3 \n"
 							 + " Afficher Valeur Totale : -----> 4 \n"
 							 + " Modifier Ustensile : ---------> 5");
@@ -125,11 +125,11 @@ public class Main {
 				 		break;
 				 	case "2":
 				 		//2
-				 		cuillere.afficherValeurTotale(2);
+				 		assietteronde.afficherValeurTotale(2);
 				 		break;
 				 	case "3":
 				 		//3
-				 		cuillere.afficherValeurTotale(3);
+				 		assiettecarree.afficherValeurTotale(3);
 				 		break;
 				 	default:
 				 }
@@ -142,7 +142,7 @@ public class Main {
 					switch(method5) {
 						case "1":
 							//1
-							cuillere.read_data();
+							cuillere.afficherCuilleres();
 							System.out.println("\n--------------------------------");
 							System.out.println(" ID pour Modifier : \n");
 							id = scan.nextInt();

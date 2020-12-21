@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class Ustensile {
+public abstract class Ustensile {
 	
 	Conection con = new Conection();
 	

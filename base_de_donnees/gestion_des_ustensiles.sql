@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : Dim 20 déc. 2020 à 21:03
+-- Généré le : lun. 21 déc. 2020 à 11:38
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -59,7 +59,9 @@ CREATE TABLE `assietteronde` (
 
 INSERT INTO `assietteronde` (`id`, `rayon`, `anne_de_fabrication`) VALUES
 (1, 20, 1943),
-(2, 33, 1933);
+(2, 99, 1999),
+(3, 80, 1998),
+(4, 90, 1990);
 
 -- --------------------------------------------------------
 
@@ -81,7 +83,8 @@ INSERT INTO `cuillere` (`id`, `longeur`, `anne_de_fabrication`) VALUES
 (1, 10, 1000),
 (2, 40, 1999),
 (3, 30, 1930),
-(4, 40, 1997);
+(4, 40, 1997),
+(5, 44, 1988);
 
 --
 -- Index pour les tables déchargées
@@ -119,13 +122,13 @@ ALTER TABLE `assiettecarree`
 -- AUTO_INCREMENT pour la table `assietteronde`
 --
 ALTER TABLE `assietteronde`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `cuillere`
 --
 ALTER TABLE `cuillere`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

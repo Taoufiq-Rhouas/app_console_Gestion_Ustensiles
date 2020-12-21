@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class Assiette extends Ustensile {
+public abstract class Assiette extends Ustensile {
 	
 	Conection con = new Conection();
 	
